@@ -2,8 +2,9 @@
   "name": "react-isomorphic-example",
   "version": "1.0.0",
   "description": "Example of how to setup a React isomorphic project with server side rendering",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
+    "start": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +22,8 @@
     "jade": "^1.11.0",
     "react": "^15.2.0",
     "react-dom": "^15.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
   }
 }
