@@ -31,6 +31,7 @@
         // Code quality
         "complexity": ["error", 5],
         "max-params": ["error", 4],
+        "space-before-function-paren": ["error", { "anonymous": "never", "named": "never" }],
         "max-statements": ["error", 10],
         "react/jsx-uses-react": 2, // Prevent React to be incorrectly marked as unused
         "react/jsx-uses-vars": 2 // Prevent variables used in JSX to be incorrectly marked as unused
