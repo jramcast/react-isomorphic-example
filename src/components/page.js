@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import Header from './header';
+import Showcase from './showcase';
+import Footer from './footer';
 
 export default class Page extends Component {
 
-  handleClick() {
-    alert('You clicked!');
-  }
-
   render() {
-    return <div onClick={this.handleClick}>Hello</div>;
+    return <div className="mesh__page" onClick={this.handleClick}>
+      <Header />
+      <Showcase />
+      <Footer />
+    </div>; 
   }
 
 }

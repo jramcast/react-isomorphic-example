@@ -29,6 +29,7 @@ if (environment === 'dev') {
   plugins.push(new webpack.HotModuleReplacementPlugin());
   plugins.push(new webpack.DefinePlugin({
     'process.env': {
+      BROWSER: true,
       NODE_ENV: JSON.stringify(environment)
     }
   }));
@@ -44,6 +45,7 @@ if (environment === 'dev') {
   plugins.push(new webpack.DefinePlugin({
     // removes a lot of debugging code in React
     'process.env': {
+      BROWSER: true,
       NODE_ENV: JSON.stringify('production')
     }
   }));
@@ -70,10 +72,10 @@ const webpackConfig = {
     path: './public/',
 
     // A filename pattern for the output files
-    filename: environment === 'dev' ? '[name].js' : '[name]-[hash].js',
+    filename: '[name].js',
 
     // A filename pattern for generated chunks.
-    chunkFilename: environment === 'dev' ? '[name].chunk.js' : '[name]-[chunkhash].chunk.js'
+    chunkFilename: '[name].chunk.js'
   },
 
   // Module loeaders
@@ -88,14 +90,14 @@ const webpackConfig = {
 
       // Extract css files
       {
-          test: /\.css$/,
-          loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       },
 
       // extract less files
       {
-          test: /\.less$/,
-          loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
       }
     ]
   },
