@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 
+const defaultStyle = {
+  height: 200,
+  lineHeight: '200px',
+  paddingLeft: '100px',
+  fontSize: '33px'
+};
+
 export default class Header extends Component {
 
-  handleClick() {
-    alert('Rendered component is now controlled in the browser');
-  }
-
   render() {
-    return <header className="mesh__header" onClick={this.handleClick}>
-      HEADER
+    return <header
+      className="mesh__header"
+      style={defaultStyle}>
+        HEADER
     </header>;
   }
 

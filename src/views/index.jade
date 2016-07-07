@@ -1,6 +1,11 @@
 doctype
 html
   head
+    link(href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css')
+    if env == 'development'
+        link(href='http://localhost:8080/index.css' rel='stylesheet')
+    else
+        link(href='index.css' rel='stylesheet')
     title React Server Side Rendering Example
   body
     div(id='react-root')!= react
@@ -10,3 +15,5 @@ html
     else
         script(src='commons.js')
         script(src='index.js')
+
+

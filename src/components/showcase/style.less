@@ -1,0 +1,46 @@
+/* Header */
+.large-section {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+.mesh__showcase .large-section {
+	background-image: url('https://images.unsplash.com/photo-1465832297267-70d368a8ea7f?dpr=1&auto=format&crop=entropy&fit=crop&w=1855&h=1043&q=80');
+	height: 600px;
+}
+
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+
+.mesh__showcase .main-title {
+	font-weight: bold;
+	font-size: 2em;
+	padding-left: 10px;
+	text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+
+.main-title .thin {
+	font-weight: 200;
+}
+
+@media only screen and (max-width : 768px) {
+	.mesh__showcase .main-title {
+		font-size: 4em;
+	}
+}
