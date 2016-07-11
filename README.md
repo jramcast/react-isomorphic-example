@@ -5,7 +5,7 @@ Run the web server:
 
     npm start
 
-Run webpack server:
+Run webpack server for live reloading:
 
     npm run build-dev
 

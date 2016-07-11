@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 // Check Environment
 const environment = process.env.NODE_ENV || 'production';
@@ -48,6 +49,13 @@ if (environment === 'dev') {
       BROWSER: true,
       NODE_ENV: JSON.stringify('production')
     }
+  }));
+
+  plugins.push(new CompressionPlugin({
+    asset: '[path].gz[query]',
+    algorithm: 'gzip',
+    test: /\.js$|\.css$/,
+    minRatio: 0.8
   }));
 }
 

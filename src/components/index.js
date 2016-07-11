@@ -6,3 +6,4 @@ ReactDOM.render(
   <Page />,
   document.getElementById('react-root')
 );
+

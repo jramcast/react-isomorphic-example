@@ -9,13 +9,23 @@ const defaultStyle = {
 
 export default class Page extends Component {
 
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  componentDidMount() {
+    console.log('did mount');
+  }
+
   render() {
+    console.log(this.props);
     return <div
       className="mesh__page"
       onClick={this.handleClick}
-      style={defaultStyle}>
-        <Header />
-        <Showcase />
+      style={Object.assign({}, defaultStyle, this.props.style)}>
+        <Header settings={this.props.header}/>
+        <Showcase/>
         <Footer />
     </div>;
   }
